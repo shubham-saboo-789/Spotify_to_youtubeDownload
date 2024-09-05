@@ -14,3 +14,9 @@ make a python function that takes a youtube video link and Download the mp3
 
 
 "app.py (i copied the whole code)" just re-format the code to make it look clean and remove unnecessary comments 
+
+
+make a aws code build spec file for docker image build
+
+
+create aws code built builtspec.yml to build docker image named spotToYout and push to docker hub with username shubhamsaboo789 and password from parameter store named dockerpassword in decryption

@@ -197,7 +197,7 @@ def convert():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False )
 
 
 # playlist_url = 'https://open.spotify.com/playlist/4jrqpB0oAqwHXezHhZThgH?si=ca72d0d4394945a6'

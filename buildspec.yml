@@ -1,0 +1,29 @@
+version: 0.2
+
+env:
+  variables:
+    DOCKERHUB_USERNAME: "shubhamsaboo789"
+  parameter-store:
+    DOCKERHUB_PASSWORD: "dockerpassword"
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+      # Retrieve the Docker password from AWS Parameter Store and log in to Docker Hub
+      - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+      - echo Build starting...
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t spotToYout .
+      - docker tag spotToYout:latest $DOCKERHUB_USERNAME/spotToYout:latest
+  post_build:
+    commands:
+      - echo Pushing the Docker image to Docker Hub...
+      - docker push $DOCKERHUB_USERNAME/spotToYout:latest
+      - echo Docker image pushed successfully.
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
