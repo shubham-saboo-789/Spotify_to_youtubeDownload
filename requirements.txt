@@ -1,0 +1,10 @@
+pip install pytube googlesearch-python
+
+
+pip install spotipy
+
+pip install yt-dlp
+
+
+pip install youtube-search-python
+
