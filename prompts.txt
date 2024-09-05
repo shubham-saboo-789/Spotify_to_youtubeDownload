@@ -1,4 +1,16 @@
+## these prompts are the basic prompts i started with i had to go through multiple iterations to get the code working and error free
 
-
+make a index.html with the heading Spotify to YouTube and description as Download your Spotify playlist using the YouTube API
+It contains a form which takes spotify playlist link as input
+Keep the page in dark theme
 
 make a app.py for hosting index.html
+
+make a python function to that takes spotify playlist link as input and returns list of all the song
+
+make a python function that takes a song name and returns youtube link of that song
+
+make a python function that takes a youtube video link and Download the mp3
+
+
+"app.py (i copied the whole code)" just re-format the code to make it look clean and remove unnecessary comments 
